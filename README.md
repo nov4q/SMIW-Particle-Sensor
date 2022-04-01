@@ -2,11 +2,11 @@
 
 -schemas were created using Eagle software;
 
-#Parts:
+Parts:
 -PLantower PMS7003;
 -ESP32-DevKitC 32E
 
-#Features:
+Features:
 -Measuring PM2.5 and PM10 particles;
 -Wi-Fi connection;
 -data upload to Thingspeak.
