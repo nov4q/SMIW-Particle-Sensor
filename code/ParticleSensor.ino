@@ -6,11 +6,11 @@
 #define RXD2 34
 #define TXD2 35
 
-const char* ssid = "YarpenLand";   // your network SSID (name) 
-const char* password = "69727500036972750003697275";   // your network password
+const char* ssid = "********";   // your network SSID (name) 
+const char* password = "********";   // your network password
 
-unsigned long myChannelNumber = 1632263;
-const char * myWriteAPIKey = "HIL9THHSOQF17ZP1";
+unsigned long myChannelNumber = 1234567; //Your thingspeak channel number 
+const char * myWriteAPIKey = "********"; //APi key
 
 unsigned long lastTime = 0;
 unsigned long timerDelay = 30000;
@@ -18,19 +18,15 @@ unsigned long timerDelay = 30000;
 WiFiClient  client;
 
 
-//HardwareSerial SerialPMS(1);
-// PMS pms(SerialPMS);
-PMS pms(Serial);//Serial1
+PMS pms(Serial);
 PMS::DATA data;
 
 float PM25;
 float PM10;
 
 void setup() {
-  // put your setup code here, to run once:
   
- // Serial1.begin(PMS::BAUD_RATE, SERIAL_8N1, 5, 4);
-  Serial.begin(9600); //115200 ? //9600
+  Serial.begin(9600); 
   WiFi.mode(WIFI_STA);   
   
   ThingSpeak.begin(client);
@@ -52,7 +48,6 @@ void loop()
             Serial.println("\nConnected.");
           }
 
-      // while (Serial1.available()) { Serial1.read(); }    // czy tu inaczej
             pms.requestRead();
             if (pms.readUntil(data))
             {
