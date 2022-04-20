@@ -10,3 +10,7 @@ Features:
 - Measuring PM2.5 and PM10 particles;
 - Wi-Fi connection;
 - data upload to Thingspeak.
+
+TODO in Code:
+- Add sensor sleep time;
+- Implement average measurement value and send to thingspeak less frequently.
